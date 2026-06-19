@@ -168,11 +168,10 @@ border-bottom:1px solid rgba(255,255,255,.06);
 .nav-container{
 
 display:flex;
-
 align-items:center;
 justify-content:space-between;
 
-padding:14px 30px;
+padding:18px 30px;
 
 }
 
@@ -188,11 +187,13 @@ text-decoration:none;
 
 .nav-logo img{
 
-height:48px;
+height:22px;
 
 width:auto;
 
 display:block;
+
+opacity:.95;
 
 }
 
