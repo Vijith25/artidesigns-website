@@ -142,6 +142,14 @@ color:var(--arti-grey);
 
 }
 
+.hero-bg,
+.hero-overlay,
+.hero-glow{
+
+pointer-events:none;
+
+}
+
 /* ==========================
 NAVBAR
 ========================== */
@@ -329,7 +337,7 @@ rgba(255,204,0,.10);
 
 position:relative;
 
-z-index:2;
+z-index:20;
 
 display:flex;
 
@@ -907,23 +915,70 @@ justify-content:center;
 
 @media(max-width:900px){
 
-.nav-menu{
+/* Remove Hero Effects */
 
+.hero-overlay{
 display:none;
+}
+
+.hero-glow{
+display:none;
+}
+
+/* Bigger Navbar Logo */
+
+.nav-logo{
+
+width:320px;
+
+overflow:hidden;
 
 }
 
 .nav-logo img{
 
-height:48px;
+width:100%;
+
+height:auto;
+
+display:block;
 
 }
 
-section{
+/* Hide Any Accidental Icon Logos */
 
-padding:90px 0;
+.loader-logo{
+
+display:none;
 
 }
+
+.hero{
+
+padding-top:120px;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+.hero-story{
+
+font-size:1rem;
+
+line-height:1.85;
+
+}
+
+.hero-bg{
+
+background-position:center center;
+
+}
+
 
 .hero{
 
