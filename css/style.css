@@ -183,17 +183,19 @@ align-items:center;
 
 text-decoration:none;
 
+width:180px;
+
+overflow:hidden;
+
 }
 
 .nav-logo img{
 
-height:22px;
+width:180px;
 
-width:auto;
+height:auto;
 
 display:block;
-
-opacity:.95;
 
 }
 
