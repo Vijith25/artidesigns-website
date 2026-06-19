@@ -929,7 +929,9 @@ display:none;
 
 .nav-logo{
 
-width:320px;
+width:420px;
+
+max-width:75vw;
 
 overflow:hidden;
 
@@ -945,13 +947,10 @@ display:block;
 
 }
 
+}
+
 /* Hide Any Accidental Icon Logos */
 
-.loader-logo{
-
-display:none;
-
-}
 
 .hero{
 
@@ -980,11 +979,6 @@ background-position:center center;
 }
 
 
-.hero{
-
-padding-top:140px;
-
-}
 
 .hero h1{
 
