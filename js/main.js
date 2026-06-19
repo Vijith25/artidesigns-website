@@ -1,5 +1,5 @@
 /* ==========================================
-ArtiDéSigns Website V5
+ArtiDéSigns Website V6
 main.js
 ========================================== */
 
@@ -116,6 +116,8 @@ document.querySelector('.navbar');
 
 window.addEventListener('scroll',()=>{
 
+if(!navbar) return;
+
 if(window.scrollY > 50){
 
 navbar.style.background =
@@ -127,10 +129,10 @@ navbar.style.backdropFilter =
 }else{
 
 navbar.style.background =
-'rgba(0,0,0,.88)';
+'rgba(0,0,0,.78)';
 
 navbar.style.backdropFilter =
-'blur(14px)';
+'blur(18px)';
 
 }
 
@@ -158,7 +160,7 @@ window.ArtiPortfolio = {
 
 status:'ready',
 
-version:'v5',
+version:'v6',
 
 message:
 'Portfolio galleries reserved for future integration.'
@@ -168,45 +170,21 @@ message:
 console.log(window.ArtiPortfolio);
 
 /* -----------------------------
-Future AI Assistant Hook
+Future Digital Design Hook
 ----------------------------- */
 
-window.ArtiAI = {
+window.ArtiDesignStudio = {
 
-status:'reserved',
+status:'ready',
 
-version:'future',
+version:'v6',
 
 message:
-'Arti AI Assistant reserved for future integration.'
+'Digital Design Studio reserved for future integration.'
 
 };
 
-console.log(window.ArtiAI);
-
-/* -----------------------------
-Hero Logo Parallax
------------------------------ */
-
-const heroLogo =
-document.querySelector('.hero-main-logo');
-
-window.addEventListener('mousemove',(e)=>{
-
-if(!heroLogo) return;
-
-const x =
-(window.innerWidth / 2 - e.clientX)
-/ 80;
-
-const y =
-(window.innerHeight / 2 - e.clientY)
-/ 80;
-
-heroLogo.style.transform =
-`translate(${x}px, ${y}px)`;
-
-});
+console.log(window.ArtiDesignStudio);
 
 /* -----------------------------
 Console Signature
@@ -214,7 +192,7 @@ Console Signature
 
 console.log(
 '%cArtiDéSigns',
-'color:#ff0f0f;font-size:20px;font-weight:bold;'
+'color:#ff1414;font-size:20px;font-weight:bold;'
 );
 
 console.log(
