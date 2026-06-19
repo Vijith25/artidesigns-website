@@ -1,5 +1,5 @@
 /* ==========================================
-ArtiDéSigns Website V6
+ArtiDéSigns Website V7
 main.js
 ========================================== */
 
@@ -8,6 +8,8 @@ Loader
 ----------------------------- */
 
 window.addEventListener('load',()=>{
+
+document.body.classList.add('loaded');
 
 const loader =
 document.getElementById('loader');
@@ -20,7 +22,7 @@ setTimeout(()=>{
 
 loader.remove();
 
-},600);
+},700);
 
 }
 
@@ -32,6 +34,8 @@ Smooth Reveal Animation
 
 const revealElements =
 document.querySelectorAll('.reveal');
+
+if(revealElements.length){
 
 const revealObserver =
 new IntersectionObserver(
@@ -61,6 +65,8 @@ revealElements.forEach(element=>{
 revealObserver.observe(element);
 
 });
+
+}
 
 /* -----------------------------
 Active Navigation Highlight
@@ -160,7 +166,7 @@ window.ArtiPortfolio = {
 
 status:'ready',
 
-version:'v6',
+version:'v7',
 
 message:
 'Portfolio galleries reserved for future integration.'
@@ -177,7 +183,7 @@ window.ArtiDesignStudio = {
 
 status:'ready',
 
-version:'v6',
+version:'v7',
 
 message:
 'Digital Design Studio reserved for future integration.'
@@ -185,6 +191,23 @@ message:
 };
 
 console.log(window.ArtiDesignStudio);
+
+/* -----------------------------
+Future AI Assistant Hook
+----------------------------- */
+
+window.ArtiAI = {
+
+status:'reserved',
+
+version:'future',
+
+message:
+'Arti AI Assistant reserved for future integration.'
+
+};
+
+console.log(window.ArtiAI);
 
 /* -----------------------------
 Console Signature
