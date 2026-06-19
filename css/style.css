@@ -243,65 +243,6 @@ color:var(--arti-yellow);
 
 }
 
-/* ==========================
-MOBILE NAVBAR
-========================== */
-
-@media(max-width:900px){
-
-.nav-menu{
-
-display:none;
-
-}
-
-.nav-container{
-
-justify-content:flex-start;
-
-padding:14px 20px;
-
-}
-
-.nav-logo{
-
-margin:0;
-
-overflow:visible;
-
-}
-
-.nav-logo img{
-
-height:60px;
-
-width:auto;
-
-display:block;
-
-}
-
-}
-
-@media(max-width:600px){
-
-.nav-container{
-
-padding:12px 18px;
-
-}
-
-.nav-logo img{
-
-height:54px;
-
-width:auto;
-
-display:block;
-
-}
-
-}
 
 /* ==========================
 HERO
@@ -983,11 +924,11 @@ justify-content:center;
 
 @media(max-width:900px){
 
-/* MOBILE NAVIGATION */
+/* MOBILE = LOGO ONLY */
 
 .nav-menu{
 
-display:none;
+display:none !important;
 
 }
 
@@ -999,7 +940,7 @@ padding:14px 20px;
 
 }
 
-/* MOBILE LOGO */
+/* LARGE MOBILE LOGO */
 
 .nav-logo{
 
@@ -1019,7 +960,7 @@ overflow:visible;
 
 .nav-logo img{
 
-height:52px;
+height:72px;
 
 width:auto;
 
@@ -1045,7 +986,7 @@ display:none;
 
 .hero{
 
-padding-top:110px;
+padding-top:120px;
 
 }
 
@@ -1089,7 +1030,7 @@ line-height:1.85;
 
 .hero{
 
-padding-top:100px;
+padding-top:110px;
 
 }
 
@@ -1151,13 +1092,15 @@ width:90px;
 
 }
 
-/* KEEP SAME LOGO SIZE ON SMALL PHONES */
+/* KEEP LARGE LOGO ON SMALL PHONES */
 
 .nav-logo img{
 
-height:52px;
+height:64px;
 
 width:auto;
+
+display:block;
 
 }
 
