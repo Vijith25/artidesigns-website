@@ -1,0 +1,679 @@
+/* ==========================================
+ArtiDéSigns Website v2
+style.css
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+
+--arti-black:#000000;
+--arti-dark:#0a0a0a;
+--arti-red:#ff0f0f;
+--arti-yellow:#ffcc00;
+--arti-white:#ffffff;
+--arti-grey:#888888;
+
+--container:1200px;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+background:var(--arti-black);
+color:var(--arti-white);
+
+font-family:'Inter',sans-serif;
+line-height:1.7;
+
+overflow-x:hidden;
+
+}
+
+/* ==========================
+Global
+========================== */
+
+.container{
+
+width:min(100%,var(--container));
+margin:auto;
+padding:0 24px;
+
+}
+
+section{
+
+padding:100px 0;
+
+}
+
+.section-title{
+
+font-family:'Montserrat',sans-serif;
+
+font-size:clamp(2rem,4vw,3rem);
+
+font-weight:800;
+
+text-align:center;
+
+margin-bottom:20px;
+
+color:var(--arti-yellow);
+
+}
+
+.section-subtitle{
+
+max-width:900px;
+
+margin:0 auto 60px;
+
+text-align:center;
+
+color:var(--arti-grey);
+
+}
+
+/* ==========================
+Navbar
+========================== */
+
+.navbar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+z-index:999;
+
+background:rgba(0,0,0,.90);
+
+backdrop-filter:blur(12px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
+
+}
+
+.nav-container{
+
+display:flex;
+
+align-items:center;
+justify-content:space-between;
+
+padding:18px 24px;
+
+}
+
+.nav-logo{
+
+color:var(--arti-white);
+
+text-decoration:none;
+
+font-family:'Montserrat',sans-serif;
+
+font-weight:800;
+
+letter-spacing:1px;
+
+}
+
+.nav-menu{
+
+display:flex;
+gap:30px;
+
+}
+
+.nav-menu a{
+
+color:var(--arti-white);
+
+text-decoration:none;
+
+font-size:.95rem;
+
+transition:.3s;
+
+}
+
+.nav-menu a:hover{
+
+color:var(--arti-yellow);
+
+}
+
+/* ==========================
+Hero
+========================== */
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+text-align:center;
+
+padding-top:120px;
+
+}
+
+.hero-logo{
+
+width:min(520px,85vw);
+
+height:auto;
+
+display:block;
+
+margin:auto;
+
+}
+
+.hero-text{
+
+max-width:900px;
+
+margin:40px auto 0;
+
+color:var(--arti-grey);
+
+font-size:1.05rem;
+
+}
+
+.hero-actions{
+
+margin-top:40px;
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+display:inline-flex;
+
+align-items:center;
+justify-content:center;
+
+padding:15px 30px;
+
+border-radius:999px;
+
+text-decoration:none;
+
+font-weight:700;
+
+transition:.3s;
+
+cursor:pointer;
+
+}
+
+.btn-primary{
+
+background:var(--arti-red);
+
+color:white;
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 0 25px rgba(255,15,15,.30);
+
+}
+
+.btn-secondary{
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+
+}
+
+.btn-secondary:hover{
+
+border-color:var(--arti-yellow);
+
+color:var(--arti-yellow);
+
+}
+
+/* ==========================
+Social Icons
+========================== */
+
+.social-icons{
+
+margin-top:35px;
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.social-icons a{
+
+width:48px;
+height:48px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:#111;
+
+border:1px solid rgba(255,255,255,.08);
+
+transition:.3s;
+
+}
+
+.social-icons a:hover{
+
+border-color:var(--arti-yellow);
+
+transform:translateY(-3px);
+
+}
+
+.social-icons svg{
+
+width:22px;
+height:22px;
+
+fill:white;
+
+}
+
+/* ==========================
+Services
+========================== */
+
+.grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:24px;
+
+}
+
+.card{
+
+background:#111;
+
+padding:30px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.05);
+
+transition:.3s;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+border-color:rgba(255,204,0,.35);
+
+}
+
+.card h3{
+
+font-family:'Montserrat',sans-serif;
+
+margin-bottom:15px;
+
+color:var(--arti-yellow);
+
+}
+
+.card p{
+
+color:var(--arti-grey);
+
+}
+
+/* ==========================
+Portfolio
+========================== */
+
+.portfolio-card{
+
+min-height:260px;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.portfolio-placeholder{
+
+font-size:4rem;
+
+opacity:.20;
+
+margin-bottom:15px;
+
+}
+
+.portfolio-folder{
+
+font-size:.85rem;
+
+color:var(--arti-grey);
+
+margin-top:10px;
+
+}
+
+/* ==========================
+AI Design
+========================== */
+
+.ai-section{
+
+background:#050505;
+
+border-top:1px solid rgba(255,255,255,.05);
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.ai-box{
+
+max-width:900px;
+
+margin:auto;
+
+text-align:center;
+
+}
+
+.ai-box p{
+
+color:var(--arti-grey);
+
+}
+
+/* ==========================
+Clients
+========================== */
+
+.client-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+
+gap:20px;
+
+}
+
+.client-card{
+
+height:140px;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+background:#111;
+
+border-radius:16px;
+
+border:1px dashed rgba(255,255,255,.10);
+
+transition:.3s;
+
+}
+
+.client-card:hover{
+
+border-color:var(--arti-yellow);
+
+}
+
+.client-card span{
+
+color:var(--arti-grey);
+
+}
+
+/* ==========================
+Contact
+========================== */
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.contact-card{
+
+background:#111;
+
+padding:30px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.05);
+
+}
+
+.contact-card h3{
+
+margin-bottom:15px;
+
+font-family:'Montserrat',sans-serif;
+
+color:var(--arti-yellow);
+
+}
+
+.contact-card a{
+
+color:white;
+
+text-decoration:none;
+
+}
+
+.contact-card a:hover{
+
+color:var(--arti-yellow);
+
+}
+
+/* ==========================
+Footer
+========================== */
+
+.footer{
+
+padding:60px 0;
+
+text-align:center;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.footer p{
+
+color:var(--arti-grey);
+
+}
+
+/* ==========================
+WhatsApp Floating Button
+========================== */
+
+.whatsapp-float{
+
+position:fixed;
+
+bottom:25px;
+right:25px;
+
+width:62px;
+height:62px;
+
+border-radius:50%;
+
+background:#25D366;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+z-index:999;
+
+box-shadow:0 10px 30px rgba(37,211,102,.35);
+
+transition:.3s;
+
+}
+
+.whatsapp-float:hover{
+
+transform:scale(1.08);
+
+}
+
+.whatsapp-float svg{
+
+width:30px;
+height:30px;
+
+fill:white;
+
+}
+
+/* ==========================
+Animations
+========================== */
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(30px);
+
+transition:.8s ease;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:none;
+
+}
+
+/* ==========================
+Responsive
+========================== */
+
+@media(max-width:900px){
+
+.nav-menu{
+
+display:none;
+
+}
+
+section{
+
+padding:80px 0;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero-logo{
+
+width:min(320px,85vw);
+
+}
+
+.hero-actions{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.btn{
+
+width:100%;
+
+max-width:320px;
+
+}
+
+}
