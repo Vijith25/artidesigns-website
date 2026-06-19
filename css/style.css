@@ -176,7 +176,9 @@ border-bottom:1px solid rgba(255,255,255,.06);
 .nav-container{
 
 display:flex;
+
 align-items:center;
+
 justify-content:space-between;
 
 padding:18px 30px;
@@ -191,17 +193,15 @@ align-items:center;
 
 text-decoration:none;
 
-width:180px;
-
-overflow:hidden;
+overflow:visible;
 
 }
 
 .nav-logo img{
 
-width:180px;
+height:52px;
 
-height:auto;
+width:auto;
 
 display:block;
 
@@ -232,6 +232,74 @@ transition:.3s;
 .nav-menu a:hover{
 
 color:var(--arti-yellow);
+
+}
+
+/* ACTIVE NAV LINK */
+
+.nav-menu a.active{
+
+color:var(--arti-yellow);
+
+}
+
+/* ==========================
+MOBILE NAVBAR
+========================== */
+
+@media(max-width:900px){
+
+.nav-menu{
+
+display:none;
+
+}
+
+.nav-container{
+
+justify-content:flex-start;
+
+padding:14px 20px;
+
+}
+
+.nav-logo{
+
+margin:0;
+
+overflow:visible;
+
+}
+
+.nav-logo img{
+
+height:60px;
+
+width:auto;
+
+display:block;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.nav-container{
+
+padding:12px 18px;
+
+}
+
+.nav-logo img{
+
+height:54px;
+
+width:auto;
+
+display:block;
+
+}
 
 }
 
@@ -915,46 +983,89 @@ justify-content:center;
 
 @media(max-width:900px){
 
-/* Remove Hero Effects */
+/* MOBILE NAVIGATION */
 
-.hero-overlay{
+.nav-menu{
+
 display:none;
+
 }
 
-.hero-glow{
-display:none;
+.nav-container{
+
+justify-content:flex-start;
+
+padding:14px 20px;
+
 }
 
-/* Bigger Navbar Logo */
+/* MOBILE LOGO */
 
 .nav-logo{
 
-width:420px;
+display:flex;
 
-max-width:75vw;
+align-items:center;
 
-overflow:hidden;
+justify-content:flex-start;
+
+width:auto;
+
+margin:0;
+
+overflow:visible;
 
 }
 
 .nav-logo img{
 
-width:100%;
+height:52px;
 
-height:auto;
+width:auto;
 
 display:block;
 
-}
+max-width:none;
 
 }
 
-/* Hide Any Accidental Icon Logos */
+/* MOBILE HERO CLEANUP */
 
+.hero-overlay{
+
+display:none;
+
+}
+
+.hero-glow{
+
+display:none;
+
+}
 
 .hero{
 
-padding-top:120px;
+padding-top:110px;
+
+}
+
+.hero-bg{
+
+background-position:center center;
+
+}
+
+.hero-content{
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+.hero-copy{
+
+max-width:100%;
 
 }
 
@@ -969,34 +1080,6 @@ font-size:3rem;
 font-size:1rem;
 
 line-height:1.85;
-
-}
-
-.hero-bg{
-
-background-position:center center;
-
-}
-
-
-
-.hero h1{
-
-font-size:3rem;
-
-}
-
-.hero-story{
-
-font-size:1rem;
-
-line-height:1.85;
-
-}
-
-.hero-bg{
-
-background-position:center center;
 
 }
 
@@ -1004,11 +1087,23 @@ background-position:center center;
 
 @media(max-width:600px){
 
+.hero{
+
+padding-top:100px;
+
+}
+
 .hero h1{
 
 font-size:2.3rem;
 
 line-height:1.08;
+
+}
+
+.hero-story{
+
+font-size:.95rem;
 
 }
 
@@ -1053,6 +1148,16 @@ bottom:18px;
 .loader-logo{
 
 width:90px;
+
+}
+
+/* KEEP SAME LOGO SIZE ON SMALL PHONES */
+
+.nav-logo img{
+
+height:52px;
+
+width:auto;
 
 }
 
