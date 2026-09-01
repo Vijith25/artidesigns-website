@@ -1148,3 +1148,295 @@ rgba(255,20,20,.35);
 color:#fff;
 
 }
+
+/* ==========================================
+   ArtiDéSigns
+   INSTAGRAM PORTFOLIO OVERRIDES
+========================================== */
+
+.instagram-portfolio {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.instagram-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.instagram-header h3 {
+    margin: 0 0 6px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.instagram-header p {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+.instagram-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+    align-items: stretch;
+}
+
+.instagram-grid .instagram-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+.instagram-grid .instagram-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,204,0,0.45);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+}
+
+.instagram-media-link {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    overflow: hidden;
+    background: #111;
+}
+
+.instagram-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.instagram-grid .instagram-image {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover;
+    object-position: center;
+    border: 0;
+    transition: transform 0.6s cubic-bezier(.2,.7,.2,1);
+}
+
+.instagram-card:hover .instagram-image {
+    transform: scale(1.045);
+}
+
+.instagram-grid .instagram-video {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover;
+    background: #000;
+}
+
+.instagram-card-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 17px 18px 16px;
+    box-sizing: border-box;
+}
+
+.instagram-caption {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+    opacity: 0.82;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+.instagram-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    line-height: 1.4;
+    border-top: 1px solid rgba(255,255,255,0.07);
+}
+
+.instagram-date {
+    opacity: 0.5;
+    white-space: nowrap;
+}
+
+.instagram-view-link {
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0.75;
+    transition: opacity 0.25s ease;
+}
+
+.instagram-view-link:hover {
+    opacity: 1;
+}
+
+.instagram-loading {
+    min-height: 350px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px !important;
+}
+
+.instagram-loading .portfolio-placeholder {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(110deg, rgba(255,255,255,0.03) 8%, rgba(255,255,255,0.08) 18%, rgba(255,255,255,0.03) 33%);
+    background-size: 200% 100%;
+    animation: instagramShimmer 1.5s infinite linear;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+@keyframes instagramShimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
+}
+
+.instagram-image-error {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.instagram-image-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0.7;
+}
+
+.instagram-error {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 45px !important;
+}
+
+.instagram-error .portfolio-placeholder {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.instagram-error h3 {
+    margin-bottom: 10px;
+}
+
+.instagram-error p {
+    opacity: 0.7;
+    margin-bottom: 25px;
+}
+
+.instagram-card .portfolio-placeholder {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+@media (max-width: 1100px) {
+    .instagram-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .instagram-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+}
+
+@media (max-width: 520px) {
+    .instagram-portfolio {
+        margin-top: 35px;
+    }
+
+    .instagram-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .instagram-media {
+        aspect-ratio: 1 / 1;
+    }
+
+    .instagram-card-content {
+        padding: 15px 16px;
+    }
+
+    .instagram-caption {
+        font-size: 13px;
+    }
+
+    .instagram-header h3 {
+        font-size: 20px;
+    }
+
+    .instagram-header p {
+        font-size: 13px;
+    }
+}
+
